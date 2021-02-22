@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import gifReducer from './gif/git.reducer';
+import gifReducer from './gif/gif.reducer';
 
 // @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

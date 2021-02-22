@@ -4,7 +4,7 @@ import './Main.scss';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { GifLoadType } from '../../types/common-types';
-import { requestGifs, searchGifs } from '../../store/gif/git.action';
+import { requestGifs, searchGifs } from '../../store/gif/gif.action';
 
 function Main() {
   const dispatch = useDispatch();

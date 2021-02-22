@@ -1,4 +1,4 @@
-import { ActionTypes } from './git.action';
+import { ActionTypes } from './gif.action';
 
 const defaultState = {
   isRequestInProgress: false,
