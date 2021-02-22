@@ -1,14 +1,11 @@
 import { GifRequestOptions, GifSearchOptions } from '../types/common-types';
-
-// Would be better to receive Giphy apiKey and baseUrl from env variables in production
-const apiKey = 'ee3RPrKjlojKHxCmJ2LB18GgFNZl7TGv';
-const baseUrl = 'https://api.giphy.com/v1/gifs';
+import environment from '../environment/environment';
 
 const sendRequest = async (url: string, searchOptions: GifRequestOptions | GifSearchOptions): Promise<any> => {
-  const fetchUrl = new URL(baseUrl + url);
+  const fetchUrl = new URL(environment.giphyBaseUrl + url);
 
   const params = {
-    'api_key': apiKey,
+    'api_key': environment.giphyApiKey || '',
     rating: 'g',
     ...searchOptions
   };
